@@ -15,7 +15,6 @@ ABgActor::ABgActor()
 	PaperSprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("BgActor"));
 	//FlipComp->SetupAttachment(RootComponent);
  	SetRootComponent(PaperSprite);
-
 	//导入背景资源
 	static ConstructorHelpers::FObjectFinder<UPaperSprite> BgText(TEXT("PaperSprite'/Game/flybird/textures/bg_day_Sprite.bg_day_Sprite'"));
 	if (BgText.Succeeded())
@@ -29,7 +28,7 @@ ABgActor::ABgActor()
 void ABgActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame

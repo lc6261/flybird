@@ -5,6 +5,9 @@
 #include "PaperSpriteComponent.h"
 #include "PaperSprite.h"
 
+#include "../flybirdGameModeBase.h"
+#include "BirdGameStateBase.h"
+
 // Sets default values
 ALandActor::ALandActor()
 {
@@ -47,18 +50,37 @@ void ALandActor::BeginPlay()
 	{
 		Land1->SetRelativeLocation(FVector(336.0f, 0.0f, 0.0f));
 	}
+
+
+	//获取当前世界游戏模式类
+	GameModeBase = GetWorld()->GetAuthGameMode();
+	//转换为当前游戏模式类
+	CurrenteModeBase = Cast<AflybirdGameModeBase>(GameModeBase);
+	if (GameModeBase)
+	{
+		//游戏模式获取游戏状态类
+		BirdGameStateBase = CurrenteModeBase->GetGameState<ABirdGameStateBase>();
+	}
 }
 
 // Called every frame
 void ALandActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	LandRun(DeltaTime);
+}
+void ALandActor::LandRun(float DeltaTime)
+{
 	float sp = fSpeed * DeltaTime - 1;
-	
+	POINT_NULL_RETURN(BirdGameStateBase);
+
+	if (BirdGameStateBase->GetGameState() != EGameState::EGAME_RUNING)
+		return;
+
 	Land0->AddLocalOffset(FVector(sp, 0.0f, 0.0f));
 	Land1->AddLocalOffset(FVector(sp, 0.0f, 0.0f));
 
-	if(Land0->GetRelativeLocation().X <= -336.0f)
+	if (Land0->GetRelativeLocation().X <= -336.0f)
 	{
 		Land0->SetRelativeLocation(FVector(Land1->GetRelativeLocation().X + 336.0f, 0.0f, 0.0f));
 	}
@@ -67,7 +89,5 @@ void ALandActor::Tick(float DeltaTime)
 	{
 		Land1->SetRelativeLocation(FVector(Land0->GetRelativeLocation().X + 336.0f, 0.0f, 0.0f));
 	}
-	
 
 }
-

@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "LandActor.generated.h"
+#include "PipeActor.generated.h"
 
 UCLASS()
-class FLYBIRD_API ALandActor : public AActor
+class FLYBIRD_API APipeActor : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	ALandActor();
+	APipeActor();
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,16 +27,19 @@ public:
 	class ABirdGameStateBase* BirdGameStateBase;
 	class AGameModeBase* GameModeBase;
 	class AflybirdGameModeBase* CurrenteModeBase;
+
 private:
-	//¶¯»­
-	UPROPERTY(VisibleAnywhere, Category = "ALandActor|Land0")
-	class UPaperSpriteComponent* Land0;
 
-	UPROPERTY(VisibleAnywhere, Category = "ALandActor|Land1")
-	class UPaperSpriteComponent* Land1;
+	TArray<class USceneComponent*> PipeGroup;
 
+	void PipeMove(float DeltaTime);
+	void PipeInit();
+	int iPipeNum;
 	float fSpeed;
 
-	void LandRun(float DeltaTime);
+	class USoundBase* CoinSound;
 
+
+	bool bPlaySound;
+//	int iScore;
 };
