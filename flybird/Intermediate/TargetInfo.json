@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "flybird",
+			"Path": "G:\\BaiduNetdiskWorkspace\\Unreal4\\flybird\\Source\\flybird.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "flybirdEditor",
+			"Path": "G:\\BaiduNetdiskWorkspace\\Unreal4\\flybird\\Source\\flybirdEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

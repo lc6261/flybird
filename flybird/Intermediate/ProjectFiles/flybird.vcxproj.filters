@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\flybird.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{94DCCF2C-AC8D-424F-B04A-87FFEEF54E5D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\flybird.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\flybirdEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\flappybird_res.zip" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{49BEE373-31A3-4B18-855B-683D6E728F0A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\flybird">
+      <UniqueIdentifier>{CAF12FD3-75B3-4A3C-8C95-E45BDF948D0E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\flybird\flybird.Build.cs">
+      <Filter>Source\flybird</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\flybird\flybird.cpp">
+      <Filter>Source\flybird</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\flybird\flybird.h">
+      <Filter>Source\flybird</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\flybird\flybirdGameModeBase.cpp">
+      <Filter>Source\flybird</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\flybird\flybirdGameModeBase.h">
+      <Filter>Source\flybird</Filter>
+    </ClInclude>
+    <Filter Include="Source\flybird\Private">
+      <UniqueIdentifier>{9815D0A9-B0B5-4E45-A830-9C7E6AE23858}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\flybird\Private\BgActor.cpp">
+      <Filter>Source\flybird\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\flybird\Private\BirdPawn.cpp">
+      <Filter>Source\flybird\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\flybird\Private\LandActor.cpp">
+      <Filter>Source\flybird\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\flybird\Public">
+      <UniqueIdentifier>{2295FBE2-4BCE-4545-AB6A-CE8400D6C148}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\flybird\Public\BgActor.h">
+      <Filter>Source\flybird\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\flybird\Public\BirdPawn.h">
+      <Filter>Source\flybird\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\flybird\Public\LandActor.h">
+      <Filter>Source\flybird\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
